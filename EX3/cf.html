@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shopping</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <script src="fromChecker.js"></script>
+</head>
+<body>
+    
+    <b id="a">WELCOME TO FAN's FRUIT SHOP</b></br>
+    <form action="cb.php" method="post" onsubmit="return Check()">
+    <div>
+    <b>Choose your fruit:</b><br><br>
+
+    <tr class="fruitP">
+    <td>1.<img class="fruitP" id ="apple" src ="pic/timg (1).jpeg" width="300" length="500"></td>
+    <td>2.<img class="fruitP" id ="strawberry" src ="pic/timg.jpeg" width="300" length="500"></td>
+    <td>3.<img class="fruitP" id ="banana" src ="pic/timg (2).jpeg" width="300" length="500"></td>
+    </tr>
+
+    <tr class="price">
+    
+        <td><br>&emsp;Apple $6 pre pound &emsp;&emsp; &emsp; &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;
+               
+        <td>Strawberry $8 pre pound</td>&emsp;&emsp; &emsp; &emsp; &emsp;&emsp;&emsp;
+                
+        <td>Banana  $10 pre pound
+                
+
+    </tr>
+    <tr class="amount">
+        <br>
+        &emsp;
+           <td>amount: <input class="amount" type = "number" min = "0" max = "" id="input1" value="0"></td>
+           &emsp;&emsp; &emsp; &emsp; &emsp;&emsp;
+            <td>amount: <input class="amount" type = "number" min = "0" max = "" id="input2" value="0"></td>
+            &emsp;&emsp; &emsp; &emsp; &emsp;&emsp;
+           <td>amount: <input class="amount" type = "number" min = "0" max = "" id="input3" value="0"></td>
+    </tr>
+
+    </div>
+
+    <br>
+    
+    <div>
+    <b>Choose your shipping method:    </b>
+        <br>
+    
+    <input type="radio" name="shipping" id= "s1" value="1" > Free 7 day<br>
+    <input type="radio" name="shipping" id= "s2" value="2" > $50.00 over night<br>
+    <input type="radio" name="shipping" id= "s3" value="3 " > $5.00 three day<br>
+
+    </div>
+    <br>
+    <div>
+   
+   <b> Login in with your account:<br></b>
+    Username :<input class="account" id="username" type="email"><br>
+    Password :<input class="account" id="password" type="password">
+
+    </div>
+    <br>
+    <div class="button">
+            <br><button class = "normal" type="submit" value="Submit">Submit</button>
+            <button class = "normal" type="reset" value="Reset">Reset</button></p>
+    </div>
+    <form>
+
+</body>
+</html>

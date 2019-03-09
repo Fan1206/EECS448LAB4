@@ -9,3 +9,48 @@ b
     font-size: 13pt;
     color: rgba(32, 32, 138, 0.822);
 }
+button
+{
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(8, 28, 51);
+    border-radius: 8px;
+   padding: 10px 15px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   -webkit-transition-duration: 0.4s; /* Safari */
+   transition-duration: 0.4s;
+}
+button:hover {
+    background-color:  rgb(11, 53, 12); /* Green */
+    color: white;
+  }
+.amount
+{
+    
+    background-color:  rgb(80, 45, 65); /* Green */
+    color: white;
+}
+.name
+{
+    background-color:#99ffd6
+}
+.item
+{
+    background-color: blanchedalmond;
+}
+.total
+{
+    background-color: crimson;
+}
+.pw
+{
+    color:black;
+    background-color: black;
+}
+.pw:hover
+{
+    background-color: white;
+}

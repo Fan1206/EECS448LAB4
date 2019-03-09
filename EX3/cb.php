@@ -1,76 +1,82 @@
 <?php
-$I1 = $_POST["input1"];
+    echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\" />";
+$I1 = $_POST["a"];
+if($I1=="") $I1=0;
 $P1 = $I1 * 6;
-$I2 = $_POST["input2"];
+$I2 = $_POST["s"];
+if($I2=="") $I2=0;
 $P2 = $I2 * 8;
-$I3 = $_POST["input3"];
+$I3 = $_POST["b"];
+if($I3=="") $I3=0;
 $P3 = $I3 * 10;
 $ship = $_POST["shipping"];
 $username = $_POST["username"];
 $password = $_POST["password"];
 $total =$P1 + $P2 + $P3;
-
-echo "You choose <br>$I1 iphone,<br> $I2 ipad,<br> $I3 airpod.<br><br>";
-echo "Your account number is $username<br> Password is => $password<br><br>";
-if ($ship == 1)
-{
-    echo "You choose Free 7 day shipping.<br>";
-}
-if ($ship == 2)
-{
-    echo "You choose $50.00 over night shipping.<br>";
-    $total += 50;
-}
-if ($ship == 3)
-{
-    echo "You choose $5.00 three day shipping.<br>";
-    $sotal += 5;
-}
+    
+    
+echo "You choose <br>$I1 pound apple,<br> $I2 pound strawberry,<br> $I3 pound banana.<br><br>";
+    if ($ship == 1)
+    {
+        echo "You choose Free 7 day shipping.<br><br>";
+    }
+    if ($ship == 2)
+    {
+        echo "You choose $50.00 over night shipping.<br><br>";
+        $total += 50;
+    }
+    if ($ship == 3)
+    {
+        echo "You choose $5.00 three day shipping.<br><br>";
+        $total += 5;
+    }
+echo "Your username :<br> $username<br>";
+echo "Your password : <pre class='pw'> $password<br><br></pre>";
 echo "<br>Here is your table receipt:";
 echo '<table border = "2">';
-echo "<tr style=background-color:#99ffd6>";
+echo "<tr class='name'>";
 echo "<td> &nbsp </td>";
 echo "<td> Quantity </td>";
 echo "<td> Cost Per Item </td>";
 echo "<td> Sub Total </td>";
 echo "</tr>";
 echo "<tr>";
-echo "<td style=background-color:#99ffd6> iphone </td>";
-echo "<td style=background-color:#d9b3ff> $I1 </td>";
-echo "<td style=background-color:#d9b3ff> $799.00 </td>";
-echo "<td style=background-color:#d9b3ff> $$P1 </td>";
+echo "<td class='name'> Apple </td>";
+echo "<td class='item'> $I1 </td>";
+echo "<td class='item'> $6.00 </td>";
+echo "<td class='item'> $$P1 </td>";
 echo "</tr>";
 echo "<tr>";
-echo "<td style=background-color:#99ffd6> ipad </td>";
-echo "<td style=background-color:#d9b3ff> $I2 </td>";
-echo "<td style=background-color:#d9b3ff> $429.00 </td>";
-echo "<td style=background-color:#d9b3ff> $$P2 </td>";
+echo "<td class='name'> Strawberry </td>";
+echo "<td class='item'> $I2 </td>";
+echo "<td class='item'> $8.00 </td>";
+echo "<td class='item'> $$P2 </td>";
 echo "</tr>";
 echo "<tr>";
-echo "<td style=background-color:#99ffd6> Airpod </td>";
-echo "<td style=background-color:#d9b3ff> $I3 </td>";
-echo "<td style=background-color:#d9b3ff> $159.00 </td>";
-echo "<td style=background-color:#d9b3ff> $$P3 </td>";
+echo "<td class='name'> Banana </td>";
+echo "<td class='item'> $I3 </td>";
+echo "<td class='item'> $10.00 </td>";
+echo "<td class='item'> $$P3 </td>";
 echo "</tr>";
 echo "<tr>";
-echo "<td style=background-color:#99ffd6> Shipping </td>";
+echo "<td class='name'> Shipping </td>";
 if ($ship == 1)
 {
-    echo "<td colspan = 2 style=background-color:#d9b3ff> 7 days </td>";
-    echo "<td style=background-color:#d9b3ff> $0 </td>";
+    echo "<td colspan = 2 class='item'> 7 days </td>";
+    echo "<td class='item'> $0 </td>";
 }
 if ($ship == 2)
 {
-    echo "<td colspan = 2 style=background-color:#d9b3ff> Over Night </td>";
-    echo "<td style=background-color:#d9b3ff> $50 </td>";
+    echo "<td colspan = 2 class='item'> Over Night </td>";
+    echo "<td class='item'> $50 </td>";
 }
 if ($ship == 3)
 {
-    echo "<td colspan = 2 style=background-color:#d9b3ff> 3 Days </td>";
-    echo "<td style=background-color:#d9b3ff> $5 </td>";
+    echo "<td colspan = 2 class='item'> 3 Days </td>";
+    echo "<td class='item'> $5 </td>";
 }
 echo "</tr>";
-echo "<tr style=background-color:#99ffd6>";
+echo "<tr class='total  '>";
 echo "<td colspan = 3> Total Cost </td>";
 echo "<td> $$total</td>";
 echo "</tr>";
